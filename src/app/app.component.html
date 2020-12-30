@@ -1,0 +1,44 @@
+<div style="height: 100vh;">
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>ОАСК ГТП ПСГ "Укртрансгаз"</span>
+
+    <div fxShow="true" fxHide.lt-md="true">
+    <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+    <!-- This fills the remaining space of the current row -->
+    <span>
+      <a mat-button [routerLink]="'/home'"> Home </a>
+      <a mat-button [routerLink]="'/users'"> Users </a>
+      <a mat-button [routerLink]="'/table'"> Table </a>
+      <a mat-button [routerLink]="'/tree'"> Tree </a>
+      <a mat-button (click)="openDialogForm()"> Dialog-form </a>
+    </span>
+  </div>
+
+  <span class="fill-remaining-space"></span>
+    <span>
+        <label *ngIf="user$ | async; let user"> Hi, {{user.name}} </label>
+
+        <button mat-icon-button aria-label="Account" [routerLink]="'/login'">
+          <mat-icon>account_circle</mat-icon>
+        </button>
+        
+
+        <button mat-icon-button aria-label="Exit" (click)="logout()">
+          <mat-icon>exit_to_app</mat-icon>
+        </button>
+
+    </span>
+
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<app-loading></app-loading>
+
+<router-outlet></router-outlet>
+
+</div>
+
+
+

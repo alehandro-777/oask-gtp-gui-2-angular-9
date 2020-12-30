@@ -1,0 +1,22 @@
+<div [formGroup]="form">
+    <div [ngSwitch]="input.type">
+
+      <mat-form-field *ngSwitchCase="'select'">             
+        <mat-label>{{input.label}}</mat-label>
+          <mat-select [id]="input.name" [formControlName]="input.name" [value]="input.value">
+            <mat-option *ngFor="let opt of input.options" [value]="opt.key"> {{opt.value}} </mat-option>
+          </mat-select>
+      </mat-form-field>
+
+      <mat-form-field *ngSwitchDefault>
+        <mat-label>{{input.label}}</mat-label>
+        <input matInput [formControlName]="input.name" [id]="input.name" [type]="input.type" [value]="input.value"
+           [min]="input.min" [max]="input.max"/>
+        <mat-error *ngIf="!isValid">
+          {{input.label}} <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      
+    </div>  
+</div>

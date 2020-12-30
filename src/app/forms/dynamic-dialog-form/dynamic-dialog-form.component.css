@@ -1,0 +1,8 @@
+.dynamic-form-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dynamic-form-container > * {
+    width: 100%;
+  }
