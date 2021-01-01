@@ -24,9 +24,7 @@ export class AppComponent implements OnInit {
     this.user$ = this._authService.user;
   }
 
-  openDialogForm(){
-    this._formService.openDialog('4');
-  }
+
 
   logout(){
     this._authService.logout(); 
