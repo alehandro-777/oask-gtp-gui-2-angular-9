@@ -1,3 +1,18 @@
 table {
   width: 100%;
+  border-collapse: collapse;
+  }
+  .mat-row{
+    height: 24px;
+  }
+  .mat-header-row{
+    height: 24px;
+  }
+
+  .mat-header-cell {
+    background-color: bisque;
+    justify-content: left;
+    font-size: medium;
+    font-weight: bold;
+    text-align: left;
   }
