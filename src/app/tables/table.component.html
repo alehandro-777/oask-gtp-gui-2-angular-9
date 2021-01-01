@@ -7,7 +7,7 @@
 
   <mat-drawer-content >
   
-      <h4>{{title}}</h4>    
+      <h4>{{api_data.title}}</h4>    
     
         <table mat-table [dataSource]="api_data.rows" class="table-forms-data" >   
     
@@ -24,8 +24,9 @@
         </table>
 
     
-      <mat-paginator> </mat-paginator>
-      <button mat-raised-button color="primary" (click)="btnUpdateClick()">Update</button>
+      <mat-paginator (page)="onPaginate($event)"> </mat-paginator>
+      <button mat-raised-button color="primary" (click)="btnUpdateClick()">Обновить</button>
+      <button mat-raised-button color="primary" (click)="openDialogForm()">Создать</button>
 
   </mat-drawer-content >
 
