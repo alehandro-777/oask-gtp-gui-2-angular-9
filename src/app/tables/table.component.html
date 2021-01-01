@@ -24,7 +24,7 @@
         </table>
 
     
-      <mat-paginator (page)="onPaginate($event)"> </mat-paginator>
+      <mat-paginator [length]="length" [pageSize]="pageSize" (page)="onPaginate($event)"> </mat-paginator>
       <button mat-raised-button color="primary" (click)="btnUpdateClick()">Обновить</button>
       <button mat-raised-button color="primary" (click)="openDialogForm()">Создать</button>
 
