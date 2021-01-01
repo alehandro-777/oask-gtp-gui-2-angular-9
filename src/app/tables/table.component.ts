@@ -18,9 +18,11 @@ export class TableComponent implements OnInit {
   //table data array
   api_data = {};
   displayedColumns = [];
+  length = 0;
+  pageSize = 0;
+  pageIndex=0;
 
   @Input() curr_form_id: string = "4";
-  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
   constructor( private dataService: TableHttpService, 
     private route: ActivatedRoute,
@@ -35,12 +37,13 @@ export class TableComponent implements OnInit {
   
   //paginator page changed
   onPaginate(event) {
+    this.pageIndex = event.pageIndex;
     this.btnUpdateClick()
     this.router.navigate(
       ['/table'], //['/table', id], 
       {
           queryParams:{
-              'page': this.paginator.pageIndex+1
+              'page': this.pageIndex+1
           }
       }
   );
@@ -53,12 +56,12 @@ export class TableComponent implements OnInit {
   }
 
   btnUpdateClick(){
-    this.dataService.getHttpData(this.curr_form_id, this.paginator.pageIndex).subscribe(api_result => {
+    this.dataService.getHttpData(this.curr_form_id, this.pageIndex).subscribe(api_result => {
       
       this.displayedColumns = this.getDisplayedCols(api_result);
 
-      this.paginator.length = api_result.link.total_count;
-      this.paginator.pageSize = api_result.link.per_page;
+      this.length = api_result.link.total_count;
+      this.pageSize = api_result.link.per_page;
 
       this.api_data = api_result;
     })
