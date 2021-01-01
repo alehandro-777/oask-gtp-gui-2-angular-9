@@ -15,12 +15,15 @@ import {catchError, map, startWith, switchMap} from 'rxjs/operators';
 
 export class TableComponent implements OnInit {
 
-  //table data array
-  api_data = {};
+
   displayedColumns = [];
   length = 0;
   pageSize = 0;
   pageIndex=0;
+
+  title:'Title';
+  rows:[];
+  header=[];
 
   @Input() curr_form_id: string = "4";
 
@@ -63,7 +66,10 @@ export class TableComponent implements OnInit {
       this.length = api_result.link.total_count;
       this.pageSize = api_result.link.per_page;
 
-      this.api_data = api_result;
+      this.title = api_result.title;
+      this.rows = api_result.rows;
+      this.header = api_result.header;
+
     })
   }
 
