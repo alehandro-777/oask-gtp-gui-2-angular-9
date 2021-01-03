@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl1: 'http://127.0.0.1:3000',
-  apiUrl:'https://oask-gtp-web-api2.herokuapp.com'
+  apiUrl: 'http://127.0.0.1:3000',
+  apiUrl1:'https://oask-gtp-web-api2.herokuapp.com'
   //apiUrl:'https://e-commerce-webapi-1.herokuapp.com'
 };
 

@@ -1,6 +1,8 @@
 table {
-  width: 100%;
   border-collapse: collapse;
+  margin-left:auto;
+  margin-right:auto;
+  border:1px solid gray;
   }
   .mat-row{
     height: 24px;
@@ -10,9 +12,16 @@ table {
   }
 
   .mat-header-cell {
+    min-width:100px;
     background-color: bisque;
     justify-content: left;
     font-size: medium;
     font-weight: bold;
     text-align: left;
+  }
+  .mat-drawer {
+    padding-right: 10px;
+  }
+  .mat-drawer-content {
+    padding-left: 10px;
   }
