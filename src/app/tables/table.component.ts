@@ -25,7 +25,7 @@ export class TableComponent implements OnInit {
   rows:[];
   header=[];
 
-  @Input() curr_form_id: string = "4";
+  @Input() curr_form_id: string = "1";
 
   constructor( private dataService: TableHttpService, 
     private route: ActivatedRoute,
