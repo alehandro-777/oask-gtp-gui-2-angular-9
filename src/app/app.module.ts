@@ -48,6 +48,7 @@ import { EditUserComponent } from './admin/user/edit-user/edit-user/edit-user.co
 import { UsersListComponent } from './admin/user/users-list/users-list/users-list.component';
 import { FileUploadComponent } from './file-upload/file-upload/file-upload.component';
 import { TreeMenuComponent } from './tree-menu/tree-menu.component';
+import { RegimComponent } from './reports/regim/regim.component';
 
 
 @NgModule({
@@ -66,6 +67,7 @@ import { TreeMenuComponent } from './tree-menu/tree-menu.component';
     UsersListComponent,
     FileUploadComponent,
     TreeMenuComponent,
+    RegimComponent,
    
     
   ],

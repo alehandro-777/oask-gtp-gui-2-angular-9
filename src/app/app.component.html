@@ -16,7 +16,7 @@
 
   <span class="fill-remaining-space"></span>
     <span>
-        <label *ngIf="user$ | async; let user"> Hi, {{user.name}} </label>
+        <label *ngIf="user$ | async; let user"> {{user.name}} </label>
 
         <button mat-icon-button aria-label="Account" [routerLink]="'/login'">
           <mat-icon>account_circle</mat-icon>

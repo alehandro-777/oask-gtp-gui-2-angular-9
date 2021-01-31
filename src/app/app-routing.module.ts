@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-
+import {RegimComponent} from './reports/regim/regim.component';
 import {HomeComponent} from './home/home.component';
 import {TableComponent} from './tables/table.component';
 import {LoginComponent} from './login/login.component';
@@ -12,7 +12,8 @@ import {UsersListComponent} from './admin/user/users-list/users-list/users-list.
 import {TreeMenuComponent} from './tree-menu/tree-menu.component'
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: RegimComponent },
+  { path: 'home', component: RegimComponent },
   { path: 'table', component: TableComponent },
   { path: 'login', component: LoginComponent },
   { path: 'form', component: DynamicFormComponent },
