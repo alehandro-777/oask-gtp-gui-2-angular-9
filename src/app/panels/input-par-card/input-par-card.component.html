@@ -1,0 +1,8 @@
+  <div class="card">
+    <div class="par-name">{{pntInfo.name}}</div>
+    <div class="par-text">{{displayValue}}</div>
+    <div class="par-eu">{{pntInfo.eu}}</div>
+    <div class="cmd-btn top right-max" (click)="loadValue()"><mat-icon>autorenew</mat-icon></div>
+    <div class="cmd-btn top right-max-1" (click)="showDialog()"><mat-icon>check_circle_outline</mat-icon></div>
+    <div class="par-name bottom left-max">#{{pntInfo._id}} calc:{{isCalculated}}</div>
+  </div>

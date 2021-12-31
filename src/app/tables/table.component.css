@@ -1,8 +1,8 @@
 table {
-  border-collapse: collapse;
-  margin-left:auto;
-  margin-right:auto;
-  border:1px solid lightgray;
+    border-collapse: collapse;
+    margin-left:auto;
+    margin-right:auto;
+    border:1px solid lightgray;
   }
   
   .mat-row{
@@ -12,12 +12,7 @@ table {
     height: 24px;
     background-color: bisque;
   }
-  .mat-drawer {
-    padding-right: 10px;
-  }
-  .mat-drawer-content {
-    padding-left: 10px;
-  }
+
   td, th {
     text-align: center;
     min-width: 75px;
@@ -27,3 +22,14 @@ table {
   th.mat-header-cell {
     text-align: center !important;
   }
+  .row-is-selected {
+    font-weight: bold;
+  }
+  .mat-row:hover .mat-cell{
+    border-color: crimson;
+  }
+  .mat-cell{
+    padding-inline: 5px;
+  }
+  
+  

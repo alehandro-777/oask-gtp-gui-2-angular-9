@@ -1,0 +1,41 @@
+[
+    [
+        { "text": "Дата, час", "rowspan": "1", "colspan": "1", "key": "1.1" },
+        { "text": "Qвтв.кс.вог.пг", "rowspan": "1", "colspan": "1", "key": "1.2" },
+        { "text": "Qвтв.кс.вог.птпг", "rowspan": "1", "colspan": "1", "key": "1.3" },
+        { "text": "Qвтв.кс.вог.кот", "rowspan": "1", "colspan": "1", "key": "1.4" },
+        { "text": "Qвтв.кс.соу", "rowspan": "1", "colspan": "1", "key": "1.5" },
+        { "text": "Qвтв.кс", "rowspan": "1", "colspan": "1", "key": "1.6" },
+        { "text": "Qвтв.псг.вог.кот", "rowspan": "1", "colspan": "1", "key": "1.7" },
+        { "text": "Qвтв.псг.соу", "rowspan": "1", "colspan": "1", "key": "1.8" },
+        { "text": "Qвтв.псг", "rowspan": "1", "colspan": "1", "key": "1.9" },
+        { "text": "Qпввг.вог", "rowspan": "1", "colspan": "1", "key": "1.10" },
+        { "text": "Qвідбор", "rowspan": "1", "colspan": "1", "key": "1.11" }
+      ],
+      [
+        { "text": "#", "rowspan": "1", "colspan": "1", "key": "2.1" },
+        { "text": "1", "rowspan": "1", "colspan": "1", "key": "2.2" },
+        { "text": "2", "rowspan": "1", "colspan": "1", "key": "2.3" },
+        { "text": "3", "rowspan": "1", "colspan": "1", "key": "2.4" },
+        { "text": "4", "rowspan": "1", "colspan": "1", "key": "2.5" },
+        { "text": "5", "rowspan": "1", "colspan": "1", "key": "2.6" },
+        { "text": "6", "rowspan": "1", "colspan": "1", "key": "2.7" },
+        { "text": "7", "rowspan": "1", "colspan": "1", "key": "2.8" },
+        { "text": "8", "rowspan": "1", "colspan": "1", "key": "2.9" },
+        { "text": "9", "rowspan": "1", "colspan": "1", "key": "2.10" },
+        { "text": "10", "rowspan": "1", "colspan": "1", "key": "2.11" }
+      ],
+      [
+        { "text": "3", "rowspan": "1", "colspan": "1", "key": "1" },
+        { "text": "3", "rowspan": "1", "colspan": "1", "key": "2" },
+        { "text": "3", "rowspan": "1", "colspan": "1", "key": "3" },
+        { "text": "3", "rowspan": "1", "colspan": "1", "key": "4" },
+        { "text": "3", "rowspan": "1", "colspan": "1", "key": "5" },
+        { "text": "3", "rowspan": "1", "colspan": "1", "key": "6" },
+        { "text": "3", "rowspan": "1", "colspan": "1", "key": "7" },
+        { "text": "3", "rowspan": "1", "colspan": "1", "key": "8" },
+        { "text": "3", "rowspan": "1", "colspan": "1", "key": "9" },
+        { "text": "3", "rowspan": "1", "colspan": "1", "key": "10" },
+        { "text": "3", "rowspan": "1", "colspan": "1", "key": "11" }
+      ]
+]

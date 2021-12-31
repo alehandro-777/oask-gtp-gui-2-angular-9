@@ -10,7 +10,10 @@ import { User } from '../admin/user/user.model'
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
     private userSubject: BehaviorSubject<User>;
+    private currDtSubject: BehaviorSubject<string>;
+
     public user: Observable<User>;
+    public dt: Observable<string>;
 
     constructor(
         private router: Router,
@@ -18,19 +21,29 @@ export class AuthenticationService {
     ) {
         this.userSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('user')));
         this.user = this.userSubject.asObservable();
+        this.currDtSubject = new BehaviorSubject<string>("");
+        this.dt = this.currDtSubject.asObservable();
     }
 
     public get userValue(): User {
         return this.userSubject.value;
     }
 
+    public get currentDateTime(): string {
+        return this.currDtSubject.value;
+    }
+
+    changeTime(newdt : string) {
+        this.currDtSubject.next(newdt);
+    }
+
     login(login: string, password: string) {
-        return this.http.post<LoginModel>(`${environment.apiUrl}/login`, { login, password })
+        return this.http.post<any>(`${environment.apiUrl}/auth/login`, { login, password })
             .pipe(map(resp => {
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
-                localStorage.setItem('user', JSON.stringify(resp.user));
+                localStorage.setItem('user', JSON.stringify(resp));
                 localStorage.setItem('jwt', JSON.stringify(resp.jwt));
-                this.userSubject.next(resp.user);
+                this.userSubject.next(resp);
                 return resp.user;
             }));
     }

@@ -1,0 +1,44 @@
+  .card {
+    position: relative;
+    width: 200px;
+    padding: 5px;
+    border: 1px solid darkgray;
+    background-color: white;
+  }
+  
+  .cmd-btn {
+    position: absolute;
+    border: 1px solid darkgrey;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+  
+  .top {
+    top: 0;
+  }
+
+  .bottom {
+    bottom: 0;
+  }
+
+  .right-max {
+    right: 0;
+  }
+  .left-max {
+    left: 0;
+  }
+  .right-max-1 {
+    right:25px;
+  }
+  .par-text {
+    font-size: 2rem;
+  }  
+  .par-eu {
+    text-align: right;
+    color: dimgray;
+  }
+  .par-name {
+    text-align: left;
+    color: dimgray;
+  }

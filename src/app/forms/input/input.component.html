@@ -1,17 +1,30 @@
 <div [formGroup]="form">
     <div [ngSwitch]="input.type">
 
-      <mat-form-field *ngSwitchCase="'select'">             
+      <mat-form-field *ngSwitchCase="'select'" appearance="outline">             
         <mat-label>{{input.label}}</mat-label>
-          <mat-select [id]="input.name" [formControlName]="input.name" [value]="input.value">
+          <mat-select [id]="input.id" [formControlName]="input.name" [value]="input.value">
             <mat-option *ngFor="let opt of input.options" [value]="opt.key"> {{opt.value}} </mat-option>
           </mat-select>
       </mat-form-field>
-
-      <mat-form-field *ngSwitchDefault>
+      
+      <mat-form-field *ngSwitchCase="'textarea'" appearance="outline">             
         <mat-label>{{input.label}}</mat-label>
-        <input matInput [formControlName]="input.name" [id]="input.name" [type]="input.type" [value]="input.value"
-           [min]="input.min" [max]="input.max"/>
+        <textarea matInput [formControlName]="input.name" 
+            [id]="input.id" 
+            [value]="input.value"></textarea>
+      </mat-form-field>
+
+      <mat-form-field *ngSwitchDefault appearance="outline">
+        <mat-label>{{input.label}}</mat-label>
+        <input matInput [formControlName]="input.name" 
+            [id]="input.id" 
+            [type]="input.type" 
+            [value]="input.value"
+            [min]="input.min" 
+            [max]="input.max"
+            [step]="input.step"
+            />
         <mat-error *ngIf="!isValid">
           {{input.label}} <strong>required</strong>
         </mat-error>
