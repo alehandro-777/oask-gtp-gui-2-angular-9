@@ -4,12 +4,16 @@
 
 export const environment = {
   production: false,
-  apiUrl1: 'http://127.0.0.1:3000',
-  apiUrl:'https://oask-gtp-web-api2.herokuapp.com'
-  //apiUrl:'https://e-commerce-webapi-1.herokuapp.com'
+  apiUrl: 'http://127.0.0.1:3000/api',
+  apiUrl1:'https://oask-gtp-web-api2.herokuapp.com',
+  apiUrl2:'http://localhost:3001'
 };
 
 /*
+  apiUrl: 'http://10.100.99.97:3000',
+  apiUrl1:'https://oask-gtp-web-api2.herokuapp.com',
+  apiUrl2:'http://10.100.99.97:3001'
+
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
  *

@@ -1,18 +1,35 @@
 table {
-  width: 100%;
-  border-collapse: collapse;
+    border-collapse: collapse;
+    margin-left:auto;
+    margin-right:auto;
+    border:1px solid lightgray;
   }
+  
   .mat-row{
     height: 24px;
   }
   .mat-header-row{
     height: 24px;
+    background-color: bisque;
   }
 
-  .mat-header-cell {
-    background-color: bisque;
-    justify-content: left;
-    font-size: medium;
-    font-weight: bold;
-    text-align: left;
+  td, th {
+    text-align: center;
+    min-width: 75px;
+    border:1px solid lightgray;
   }
+
+  th.mat-header-cell {
+    text-align: center !important;
+  }
+  .row-is-selected {
+    font-weight: bold;
+  }
+  .mat-row:hover .mat-cell{
+    border-color: crimson;
+  }
+  .mat-cell{
+    padding-inline: 5px;
+  }
+  
+  

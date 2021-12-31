@@ -1,0 +1,30 @@
+<div class="table-title"><strong>{{title}}</strong></div>
+<table mat-table [dataSource]="rows" class="table-forms-data" >   
+      
+    <!-- Header Column  -->
+    <ng-container *ngFor="let col of headerCells" [matColumnDef]="col.key">
+      <th mat-header-cell [attr.colspan]="col.colspan" [attr.rowspan]="col.rowspan" *matHeaderCellDef>{{col.text}}</th>
+    </ng-container>
+
+    <!-- Data Column -->
+    <ng-container *ngFor="let col of displayedColumns" [matColumnDef]="col">
+      <td mat-cell *matCellDef="let row" 
+        (click)="cellClick(row, col)"
+        [class.cell-is-selected]="isCellSelected(row, col)"
+        [class.mat-rownum-cell]="isCellrowNumber(row, col)"
+      >
+        {{row[col]}}
+      </td>
+      <td mat-footer-cell *matFooterCellDef>{{footer[col]}}</td>
+    </ng-container>
+    
+    <!-- Complex spaned headers -->
+    <div *ngFor="let headrow of headerRows">
+        <tr mat-header-row *matHeaderRowDef="headrow"></tr>
+    </div>
+    
+    <!-- data + footer -->
+    <tr mat-header-row *matHeaderRowDef="lastHeaderRow"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
+  </table>

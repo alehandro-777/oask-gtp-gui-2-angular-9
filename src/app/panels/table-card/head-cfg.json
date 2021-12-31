@@ -1,0 +1,29 @@
+[ 
+    [
+        {"key":"3.0", "text":"", "rowspan":"1","colspan":"1"}, 
+        {"key":"3.1", "text":"A", "rowspan":"1","colspan":"1"}, 
+        {"key":"3.2", "text":"B", "rowspan":"1","colspan":"1"},
+        {"key":"3.3", "text":"C", "rowspan":"1","colspan":"1"},
+        {"key":"3.4", "text":"D", "rowspan":"1","colspan":"1"}, 
+        {"key":"3.5", "text":"E", "rowspan":"1","colspan":"1"},
+        {"key":"3.6", "text":"F", "rowspan":"1","colspan":"1"}
+      ],
+      [
+      {"key":"2.0", "text":"#", "rowspan":"1","colspan":"1"}, 
+      {"key":"2.1", "text":"1", "rowspan":"1","colspan":"1"}, 
+      {"key":"2.2", "text":"2", "rowspan":"1","colspan":"1"},
+      {"key":"2.3", "text":"3", "rowspan":"1","colspan":"1"},
+      {"key":"2.4", "text":"4", "rowspan":"1","colspan":"1"}, 
+      {"key":"2.5", "text":"5", "rowspan":"1","colspan":"1"},
+      {"key":"2.6", "text":"6", "rowspan":"1","colspan":"1"}
+    ],
+    [
+        {"key":"0", "text":"", "rowspan":"1","colspan":"1"}, 
+        {"key":"1", "text":"", "rowspan":"1","colspan":"1"}, 
+        {"key":"2", "text":"2", "rowspan":"1","colspan":"1"},
+        {"key":"3", "text":"3", "rowspan":"1","colspan":"1"},
+        {"key":"4", "text":"2", "rowspan":"1","colspan":"1"}, 
+        {"key":"5", "text":"3", "rowspan":"1","colspan":"1"},
+        {"key":"6", "text":"4", "rowspan":"1","colspan":"1"}  
+    ]  
+  ]

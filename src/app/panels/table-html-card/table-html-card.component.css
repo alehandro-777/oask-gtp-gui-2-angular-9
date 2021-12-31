@@ -1,0 +1,47 @@
+.card {
+    position: relative;
+    background-color: lemonchiffon;
+    font-size: 0.9em;
+  }
+
+.table-content table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    min-width: 400px;
+    border: 1px solid #dddddd;
+}
+
+.table-content tbody tr {
+    text-align: left;
+}
+
+.table-content td {
+    border: 1px solid #dddddd;
+    padding: 3px 3px;
+}
+
+.cmd-btn {
+    position: absolute;
+    border: 1px solid darkgrey;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+
+  .top {
+    top: 0;
+  }
+
+  .bottom {
+    bottom: 0;
+  }
+
+  .right-max {
+    right: 0;
+  }
+  .left-max {
+    left: 0;
+  }
+  .right-max-1 {
+    right:25px;
+  }

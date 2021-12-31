@@ -1,13 +1,7 @@
 import {NestedTreeControl} from '@angular/cdk/tree';
 import {Output, Input, Component, EventEmitter} from '@angular/core';
 import {MatTreeNestedDataSource} from '@angular/material/tree';
-import { TreeMenuHttpService } from './tree-menu.services';
-
-interface TreeMenuNode {
-  name: string;
-  children?: TreeMenuNode[];
-}
-
+import { TreeMenuNode } from './tree-menu-node.model';
 
 @Component({
   selector: 'app-tree-menu',
@@ -16,28 +10,29 @@ interface TreeMenuNode {
 })
 export class TreeMenuComponent {
   
-  @Input() id: string;
+  selectedNode:number=0;
+
+  @Input() root: TreeMenuNode[];
   @Output() change: EventEmitter<any> = new EventEmitter<any>();
 
-  treeControl = new NestedTreeControl<TreeMenuNode>(node => node.children);
+  treeControl = new NestedTreeControl<TreeMenuNode>(node => node.childNodes);
   dataSource = new MatTreeNestedDataSource<TreeMenuNode>();
 
-  constructor(private dataService: TreeMenuHttpService) { 
+  constructor() { 
   }
-
-  hasChild = (_: number, node: TreeMenuNode) => !!node.children && node.children.length > 0;
 
   ngOnInit() {
-    this.btnUpdateClick();
+    this.dataSource.data = this.root;
   }
 
-  btnUpdateClick(){
-    this.dataService.getHttpData(this.id).subscribe(api_result => {
-      this.dataSource.data = [api_result];
-    });
+  isSelected(node){
+    return (this.selectedNode == node.payload.id) ? "primary" : "";
   }
+
   leafClick(node){
     //alert(JSON.stringify(node.payload)); 
+    this.selectedNode = node.payload.id;
     this.change.emit(node.payload);
   }
+  hasChild = (_: number, node: TreeMenuNode) => !!node.childNodes && node.childNodes.length > 0; 
 }

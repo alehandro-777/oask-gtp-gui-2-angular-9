@@ -30,6 +30,7 @@ import {MatChipsModule} from '@angular/material/chips';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import {MatTreeModule} from '@angular/material/tree';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 import {TableComponent} from './tables/table.component';
 import { HtmlInputComponent } from './forms/input/input.component';
@@ -43,12 +44,21 @@ import { LoaderComponent } from './loader/loader.component';
 import { DynamicFormComponent } from './forms/dynamic-form/dynamic-form/dynamic-form.component';
 import { HomeComponent } from './home/home.component';
 
-import { EditProductComponent } from './admin/product/edit-product/edit-product.component';
-import { EditUserComponent } from './admin/user/edit-user/edit-user/edit-user.component';
-import { UsersListComponent } from './admin/user/users-list/users-list/users-list.component';
+
 import { FileUploadComponent } from './file-upload/file-upload/file-upload.component';
 import { TreeMenuComponent } from './tree-menu/tree-menu.component';
+import { ComplexTableComponent } from './tables/complex-table/complex-table.component';
+import { CreateValueDialogBtnComponent } from './forms/create-value-dialog-btn/create-value-dialog-btn.component';
+import { InputParCardComponent } from './panels/input-par-card/input-par-card.component';
+import { InputDataDashboardComponent } from './dashboards/input-data-dashboard/input-data-dashboard.component';
+import { TableCardComponent } from './panels/table-card/table-card.component';
+import { PointInfoCardComponent } from './panels/point-info-card/point-info-card.component';
+import { ControlPanelBtnComponent } from './dashboards/control-panel-btn/control-panel-btn.component';
+import { ControlPanelComponent } from './dashboards/control-panel/control-panel.component';
+import { TableDashboardComponent } from './dashboards/table-dashboard/table-dashboard.component';
+import { TableHtmlCardComponent } from './panels/table-html-card/table-html-card.component';
 
+   
 
 @NgModule({
   declarations: [
@@ -61,11 +71,19 @@ import { TreeMenuComponent } from './tree-menu/tree-menu.component';
     DynamicFormComponent,
     HomeComponent,
 
-    EditProductComponent,
-    EditUserComponent,
-    UsersListComponent,
     FileUploadComponent,
     TreeMenuComponent,
+    ComplexTableComponent,
+    CreateValueDialogBtnComponent,
+    InputParCardComponent,
+    InputDataDashboardComponent,
+    TableCardComponent,
+    PointInfoCardComponent,
+    ControlPanelBtnComponent,
+    ControlPanelComponent,
+    TableDashboardComponent,
+    TableHtmlCardComponent,
+
    
     
   ],
@@ -99,7 +117,8 @@ import { TreeMenuComponent } from './tree-menu/tree-menu.component';
     MatChipsModule,
     FlexLayoutModule,
     MatTreeModule,
-
+    MatGridListModule,
+    
   ],
   entryComponents: [
     DynamicDialogFormComponent

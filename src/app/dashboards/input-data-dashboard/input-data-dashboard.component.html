@@ -1,0 +1,14 @@
+
+    <mat-grid-list cols="5" rowHeight="125px">    
+        
+        <mat-grid-tile rowspan="3">
+            <app-tree-menu [root]="side_menu" (change)="pointChanged($event)"></app-tree-menu>
+        </mat-grid-tile> 
+
+        <mat-grid-tile *ngFor="let point of points">
+                <app-input-par-card [point]="point" ></app-input-par-card>       
+        </mat-grid-tile>       
+    
+    </mat-grid-list>
+
+

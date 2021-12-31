@@ -1,23 +1,38 @@
 <div style="height: 100vh;">
 
-<mat-toolbar color="primary">
+<mat-toolbar color="light">
   <mat-toolbar-row>
-    <span>ОАСК ГТП ПСГ "Укртрансгаз"</span>
 
     <div fxShow="true" fxHide.lt-md="true">
     <!-- The following menu items will be hidden on both SM and XS screen sizes -->
     <!-- This fills the remaining space of the current row -->
     <span>
-      <a mat-button [routerLink]="'/home'"> Home </a>
-      <a mat-button [routerLink]="'/users'"> Users </a>
-      <a mat-button [routerLink]="'/table'"> Table </a>
-      <a mat-button [routerLink]="'/tree'"> Tree </a>
+
     </span>
   </div>
 
-  <span class="fill-remaining-space"></span>
+  <button mat-icon-button >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>
+
+  <span class="fill-remaining-space">
+
+    <mat-form-field  appearance="outline">             
+        <input matInput type="date" id="gasday" name="gasday" [value]="gasday" (change)="DateChanged($event)">
+      </mat-form-field>
+      <span>
+        &nbsp;&nbsp;
+      </span>
+        <mat-form-field  appearance="outline">
+      <input matInput type="time" id="time" name="time" [value]="gastime" (change)="TimeChanged($event)">
+    </mat-form-field>      
+
+  </span>
     <span>
-        <label *ngIf="user$ | async; let user"> Hi, {{user.name}} </label>
+        <label *ngIf="user$ | async; let user"> {{user.name}} </label>
 
         <button mat-icon-button aria-label="Account" [routerLink]="'/login'">
           <mat-icon>account_circle</mat-icon>
@@ -35,7 +50,21 @@
 
 <app-loading></app-loading>
 
-<router-outlet></router-outlet>
+<mat-drawer-container autosize class="mat-drawer-container"> 
+
+  <mat-drawer mode="side" opened class="mat-drawer">  
+
+      <app-control-panel (clicked)="panelClick($event)"></app-control-panel>        
+      
+  </mat-drawer>
+
+  <mat-drawer-content class="mat-drawer-content">        
+
+    <router-outlet></router-outlet>
+      
+  </mat-drawer-content >
+
+</mat-drawer-container>
 
 </div>
 

@@ -6,9 +6,26 @@
             "type": "number",
             "min": "0",
             "max": "3",
-            "regex": "regex_for_validation",
-            "_id": 7,
-            "options": [],
+            "step": "0.1",
+            "options": []
+
+The following input types can be used with matInput:
+
+color
+date
+datetime-local
+email
+month
+number
+password
+search
+tel
+text
+time
+url
+week
+
+
 */
 
 export class InputCfg {
@@ -17,7 +34,8 @@ export class InputCfg {
     name: string;
     label: string;    
     type: string;
-    min: string;
-    max: string;
-    options:{ key: string, value: string }[] 
+    min?: string;
+    max?: string;
+    step?: string;
+    options?:{ key: string, value: string }[] 
 }

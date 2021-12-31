@@ -1,10 +1,15 @@
-.example-tree-invisible {
+.tree-menu-invisible {
     display: none;
   }
   
-  .example-tree ul,
-  .example-tree li {
+  .tree-menu ul,
+  .tree-menu li {
     margin-top: 0;
     margin-bottom: 0;
     list-style-type: none;
+  }
+  .mat-tree-node {
+    height: 24px;
+    min-height: 24px;
+    min-width: 200px;
   }

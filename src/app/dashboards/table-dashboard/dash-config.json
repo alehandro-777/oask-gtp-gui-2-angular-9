@@ -1,0 +1,34 @@
+[
+  {"icon":"mic","name":"Активний газ",  "payload":{"id":3}},
+  {"icon":"mic","name":"ВТВ....",  "payload":{"id":3}},
+  {"icon":"mic","name":"ВТВ....",  "payload":{"id":3}},
+  {"icon":"mic","name":"ВТВ....",  "payload":{"id":3}},
+
+    {
+      "icon":"commute","name":"Звіти добові", "payload":{"id":1},      
+      "childNodes":[
+        {"icon":"mic","name":"КС Бобровницька",  "payload":{"id":1}}, 
+        {"icon":"mic","name":"ПСГ Мрин",  "payload":{"id":3}},
+        {"icon":"mic","name":"Стан ГПА",  "payload":{"id":3}},
+        {"icon":"mic","name":"Стан ПСГ",  "payload":{"id":3}}
+      ]
+    },
+    {
+      "icon":"commute","name":"Звіти міс", "payload":{"id":1},      
+      "childNodes":[
+        {"icon":"mic","name":"Відбір",  "payload":{"id":1}}, 
+        {"icon":"mic","name":"Закачка",  "payload":{"id":3}},
+        {"icon":"mic","name":"Приймання",  "payload":{"id":3}},
+        {"icon":"mic","name":"Передавання",  "payload":{"id":3}}
+      ]
+    }, 
+    {
+      "icon":"commute","name":"Звіти рік", "payload":{"id":1},      
+      "childNodes":[
+        {"icon":"mic","name":"Відбір",  "payload":{"id":1}}, 
+        {"icon":"mic","name":"Закачка",  "payload":{"id":3}},
+        {"icon":"mic","name":"Приймання",  "payload":{"id":3}},
+        {"icon":"mic","name":"Передавання",  "payload":{"id":3}}
+      ]
+    } 
+]

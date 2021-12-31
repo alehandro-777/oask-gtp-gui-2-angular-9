@@ -1,9 +1,0 @@
-.main-content {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
-}
-.user-card {
-    max-width: 200px;
-    margin: 10px;
-  }

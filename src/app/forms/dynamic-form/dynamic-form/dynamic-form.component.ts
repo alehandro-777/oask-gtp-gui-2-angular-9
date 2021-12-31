@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, Validators }                 from '@angular/forms';
 import { InputCfg } from '../../input-cfg-model';
-import {FormService} from '../../form.service';
 
 @Component({
   selector: 'app-dynamic-form',
@@ -9,31 +8,26 @@ import {FormService} from '../../form.service';
   styleUrls: ['./dynamic-form.component.css']
 })
 export class DynamicFormComponent implements OnInit {
-  constructor(
-      private _formService : FormService,
-    ) 
-    { }
+  constructor() { }
 
-    title: string = 'Not set';
-    inputs: InputCfg[] = [];
+    @Input() title: string;
+    @Input() inputs: InputCfg[];
+    
+    @Output() okClicked: EventEmitter<any> = new EventEmitter<any>();
+    @Output() cancelClicked: EventEmitter<any> = new EventEmitter<any>();
+
     form: FormGroup;  
 
   ngOnInit() {
-    this._formService.getDynamicFormConfig('form_id').subscribe(
-      data=>{
-        this.title = data.title;
-        this.inputs = data.controls;
-        this.form = this.toFormGroup( this.inputs );
-      });
-
+    this.form = this.toFormGroup( this.inputs );
   }
   
   onNoClick(): void {
-    //this.dialogRef.close();
+    this.cancelClicked.emit();
   }
 
   onSubmit() {
-    //this.dialogRef.close(this.form.value);
+    this.okClicked.emit(this.form.value);
   }
 
   toFormGroup(questions: InputCfg[] ) {

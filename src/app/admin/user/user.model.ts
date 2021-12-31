@@ -1,7 +1,6 @@
 export class User {
    _id:string;
    profile:string;
-   shopcart:string;
    name:string;
    email:string;
    login:string;

@@ -1,11 +1,15 @@
-<mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="example-tree">
+<mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="tree-menu">
     <!-- This is the tree node template for leaf nodes -->
     <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
       <li class="mat-tree-node" >
-        <!-- use a disabled button to provide padding for tree leaf -->
-        <button mat-icon-button disabled ></button>
-        <mat-checkbox (click)="leafClick(node)">{{node.name}}</mat-checkbox>
+        <button mat-icon-button [color]="isSelected(node)" (click)="leafClick(node)">
+          <mat-icon>{{node.icon}}</mat-icon>
+          {{node.name}}
+        </button>
         
+        <!-- 
+           <mat-checkbox (click)="leafClick(node)">{{node.name}}</mat-checkbox>
+        -->
       </li>
     </mat-tree-node>
     <!-- This is the tree node template for expandable nodes -->
@@ -20,7 +24,7 @@
           </button>
           {{node.name}}
         </div>
-        <ul [class.example-tree-invisible]="!treeControl.isExpanded(node)">
+        <ul [class.tree-menu-invisible]="!treeControl.isExpanded(node)">
           <ng-container matTreeNodeOutlet></ng-container>
         </ul>
       </li>
