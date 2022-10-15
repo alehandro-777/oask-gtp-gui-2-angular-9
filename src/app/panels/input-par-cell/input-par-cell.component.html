@@ -1,0 +1,8 @@
+
+    <input class="par-input" [id]="point" [name]="point" [type]="pntConfig.type" 
+            [min]="pntConfig.min" 
+            [max]="pntConfig.max" [step]="pntConfig.step" [value]="displayValue" 
+            (change)="valueChanged($event)"
+            [readonly]="isBlocked"
+            [title]="point"
+            [style.width]="width">

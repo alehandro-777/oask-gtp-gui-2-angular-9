@@ -1,4 +1,12 @@
-.container {
+.form-container {
     display: flex;
-    justify-content:space-around;
+    flex-direction: row;
+    background-color: lightgrey;
+    margin: 10px;
 }
+
+.form-control {
+    width: 100%;
+    outline: none;
+    padding: 5px;
+} 

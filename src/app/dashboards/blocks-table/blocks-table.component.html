@@ -1,0 +1,37 @@
+<div class="form-container">
+    <select class="form-control">
+        <option value="1" selected>Last 7 days</option>
+        <option value="2">Last month</option>
+        <option value="3">Last 3 month</option>
+        <option value="4">Last 6 month</option>
+        <option value="5">Last year</option>
+        <option value="0">All</option>
+    </select>
+    <span  class="form-control">Від / До</span>
+    <input  class="form-control" type="date" [value]="dt_begin" (change)="startChanged($event)">
+    <input  class="form-control" type="date" [value]="dt_end" (change)="endChanged($event)">
+</div>
+
+<div><strong>Таблиця [1]</strong> Блокування\ розблокування введення даних</div>
+
+<table class="table-blocks">
+    <thead class="table-blocks-header">
+        <th>Дата / час</th>
+        <th>Роль</th>
+        <th>Користувач</th>
+        <th>Дія</th>
+    </thead>
+    <tbody>
+        <tr class="table-row" *ngFor = "let item of data; let i = index">
+            <td>{{item.time_stamp | date:'shortDate'}}</td> 
+            <td>{{item.role.full_name}}</td> 
+            <td>{{item.user.name}}</td>
+            <td>
+                <button mat-icon-button (click)="unLockClicked(item)" [disabled]="!item.active">
+                    <mat-icon *ngIf="item.active">lock</mat-icon> 
+                    <mat-icon *ngIf="!item.active">lock_open</mat-icon>
+                </button> 
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,16 @@
+<input class="par-input" [id]="point.bind" [name]="point.bind" [type]="point.html" 
+[min]="point.min" 
+[max]="point.max" [step]="point.step" [value]="point.value" 
+(change)="valueChanged($event)"
+[readonly]="isBlocked"
+[title]="point.bind"
+[style.background-color]="point.bc"
+[style.font-weight]="point.fw"
+[style.width]="point.width">
+
+<!--
+            [ngStyle]="{
+          'font-size': '14px',
+          'font-family': 'Segoe Print'
+        }"
+-->

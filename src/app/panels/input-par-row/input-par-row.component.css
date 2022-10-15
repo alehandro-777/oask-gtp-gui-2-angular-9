@@ -1,0 +1,29 @@
+.card {
+  border: 1px solid darkgray;
+  background-color: white;
+  display: flex;
+  flex-flow: row wrap;
+}
+ 
+.cmd-btn {
+  border: 1px solid darkgrey;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+.par-input {
+  /*font-size:24px;
+  width: 75px;*/
+  flex: 1;
+}
+.par-eu {
+  margin: 3px;
+  color: dimgray;
+  flex: 1;
+}
+.par-name {
+  margin: 3px;
+  color: dimgray;
+  flex: 1;
+} 
+ 

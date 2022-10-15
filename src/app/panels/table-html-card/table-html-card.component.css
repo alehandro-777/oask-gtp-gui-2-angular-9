@@ -1,14 +1,17 @@
-.card {
-    position: relative;
-    background-color: lemonchiffon;
+.table-title {
     font-size: 0.9em;
-  }
+    margin: 10px;
+}
 
 .table-content table {
     border-collapse: collapse;
-    margin: 25px 0;
+    margin: 5px 0;
     min-width: 400px;
     border: 1px solid #dddddd;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 0.8em;
 }
 
 .table-content tbody tr {
@@ -20,28 +23,15 @@
     padding: 3px 3px;
 }
 
-.cmd-btn {
-    position: absolute;
-    border: 1px solid darkgrey;
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-  }
+.table-content .headcol {
+    /* Background color */
+    background-color: #ddd;
 
-  .top {
-    top: 0;
-  }
-
-  .bottom {
-    bottom: 0;
-  }
-
-  .right-max {
-    right: 0;
-  }
-  .left-max {
+    /* Stick to the left */
     left: 0;
-  }
-  .right-max-1 {
-    right:25px;
-  }
+    position: sticky;
+
+    /* Displayed on top of other rows when scrolling */
+    z-index: 1;
+}
+

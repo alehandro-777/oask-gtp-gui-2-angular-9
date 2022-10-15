@@ -21,8 +21,7 @@ export class InputParCardComponent implements OnInit, OnDestroy {
   @Input() point: Number =1;
   @Input() dt: string = "2021-12-01T07:00";
   
-  user : User;
-  
+  user : User; 
   pntInfo : any = {};
   pntValue : PointValue;
 

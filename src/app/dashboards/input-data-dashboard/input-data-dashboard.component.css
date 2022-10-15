@@ -1,3 +1,36 @@
-.side {
-  float: left;
+table {
+  border-collapse: collapse;
+  min-width: 400px;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  border-spacing:0px;
+}
+
+thead {
+  background-color: #0bbbef;
+  text-align: left;
+  border: 1px solid #dddddd;
+  font-size: 0.8em;
+  color: white;
+}
+
+td {
+  border: 1px solid #dddddd;  
+  min-width: 50px;
+  padding: 0px;
+}
+
+th {
+  padding: 3px;
+  border: 1px solid #dddddd;
+}
+
+.form-label {
+  padding: 3px;
+  font-size: small;
+}
+
+tbody .table-row:nth-child(even) {
+  background-color: lightgray;
 }

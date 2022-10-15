@@ -1,0 +1,42 @@
+{
+    "_id" : 1,
+    "name": "Menu 1",
+    "side_menu" :
+[ 
+{
+    "icon":"mic",
+    "name":"Об'екти", 
+    "childNodes":[
+      {"icon":"input","name":"Form 1",  "payload":{"component":"dashboard","id":1}}, 
+      {"icon":"input","name":"Form 2",  "payload":{"component":"dashboard","id":2}}, 
+      {"icon":"input","name":"Form 3",  "payload":{"component":"dashboard","id":3}}, 
+
+      {"icon":"table_chart","name":"Table 1",  "payload":{"component":"tabledash","id":1}},
+      {"icon":"table_chart","name":"Table 2", "payload":{"component":"tabledash","id":2}},
+      {"icon":"table_chart","name":"Table 3", "payload":{"component":"tabledash", "id":3}},    
+
+      {"icon":"wallpaper","name":"Мрин стан",  "payload":{"component":"addpoint", "id":83}}, 
+      
+      {"icon":"mic","name":"Point 7",  "payload":{"component":"addpoint","id":7}}, 
+      {"icon":"mic","name":"Point 8",  "payload":{"component":"addpoint","id":8}}, 
+      {"icon":"mic","name":"Point 9",  "payload":{"component":"addpoint","id":9}} ,
+      {"icon":"mic","name":"Point 10", "payload":{"component":"addpoint","id":10}},
+
+      {"icon":"wallpaper","name":"Point 11", "payload":{"id":11}},    
+      {"icon":"wallpaper","name":"Point 12",  "payload":{"id":12}}, 
+      {"icon":"mic","name":"Point 9",  "payload":{"id":9}}, 
+      {"icon":"mic","name":"Point 10",  "payload":{"id":10}}, 
+      {"icon":"mic","name":"Point 11",  "payload":{"id":11}} ,
+      {"icon":"mic","name":"Point 127", "payload":{"id":127}},
+      {"icon":"wallpaper","name":"Point 128", "payload":{"id":128}},    
+      {"icon":"wallpaper","name":"Point 129",  "payload":{"id":129}}, 
+      {"icon":"mic","name":"Point 94",  "payload":{"id":94}}, 
+      {"icon":"mic","name":"Point 105",  "payload":{"id":105}},
+      {"icon":"mic","name":"Point 141",  "payload":{"id":141}},
+      {"icon":"mic","name":"Point 142",  "payload":{"id":142}} 
+    ],
+    "payload":{"id":1}
+  }
+]
+
+}

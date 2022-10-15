@@ -1,0 +1,39 @@
+.form-container {
+    display: flex;
+    flex-direction: row;
+    background-color: lightgrey;
+    margin: 10px;
+}
+
+.form-control {
+    width: 100%;
+    outline: none;
+    padding: 5px;
+} 
+
+.table-blocks {
+    border-collapse: collapse;
+    margin: 5px 0;
+    min-width: 400px;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 0.9em;
+}
+
+.table-blocks thead {
+    background-color: #0bbbef;
+    text-align: left;
+    border: 1px solid #dddddd;
+    color: white;
+}
+
+.table-blocks tbody tr {
+    text-align: left;
+}
+
+
+.table-blocks td, th {
+    border: 1px solid #dddddd;
+    padding: 5px; 
+}
