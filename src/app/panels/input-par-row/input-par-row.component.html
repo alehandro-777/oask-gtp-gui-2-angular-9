@@ -1,0 +1,15 @@
+ <div class="card">
+    <div class="par-name">{{pntInfo._id}}: {{pntInfo.name}} {{isCalculated ? '[F]' : ''}}</div>    
+
+        <input class="par-input" [id]="point" [name]="point" [type]="pntInfo.type" 
+                [min]="pntInfo.min" 
+                [max]="pntInfo.max" [step]="pntInfo.step" [value]="displayValue" 
+                (change)="valueChanged($event)"
+                [readonly]="isBlocked"
+                [title]="previousDisplayValue">
+
+        <input class="par-input" [value]="previousDisplayValue"  readonly >
+  
+    <div class="par-eu">{{pntInfo.eu}} {{httpError? httpError.status :''}}</div>
+
+</div>

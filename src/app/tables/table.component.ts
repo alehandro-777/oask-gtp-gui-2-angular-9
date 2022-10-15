@@ -1,5 +1,5 @@
 import { Input, Component, Output, OnInit, EventEmitter } from '@angular/core';
-import { HeaderModel } from './table-model';
+import { HeaderModel } from '../tables/table-model';
 
 @Component({
   selector: 'table-http',

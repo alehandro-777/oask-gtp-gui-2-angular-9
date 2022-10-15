@@ -1,0 +1,12 @@
+<div class="container">
+    <span *ngFor="let node of root" class="menu-btn">
+        <button  mat-raised-button [color]="isSelected(node)" (click)="leafClick(node)">
+            <!--
+                <mat-icon>{{node.icon}}</mat-icon>                    
+            -->
+            
+            {{node.name}}
+        </button>    
+        
+    </span>
+</div>

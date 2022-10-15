@@ -1,0 +1,10 @@
+<table-http [rows]="rows" 
+    [header]="header" 
+    [length]="length" 
+    [pageSize]="pageSize" 
+    [pageIndex]="pageIndex" 
+    [title]="title" 
+    (pageChanged)="pageChanged($event)" 
+    (rowSelected)="rowSelected($event)" 
+    *ngIf="point">
+</table-http>

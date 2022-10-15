@@ -57,6 +57,17 @@ import { ControlPanelBtnComponent } from './dashboards/control-panel-btn/control
 import { ControlPanelComponent } from './dashboards/control-panel/control-panel.component';
 import { TableDashboardComponent } from './dashboards/table-dashboard/table-dashboard.component';
 import { TableHtmlCardComponent } from './panels/table-html-card/table-html-card.component';
+import { ButtonsMenuComponent } from './tree-menu/buttons-menu/buttons-menu.component';
+import { InputParRowComponent } from './panels/input-par-row/input-par-row.component';
+import { SafeHtmlPipe } from './shared/safe-html.pipe';
+import { AddPointDashboardComponent } from './dashboards/add-point-dashboard/add-point-dashboard.component';
+import { InputParCellComponent } from './panels/input-par-cell/input-par-cell.component';
+import { CalcParCellComponent } from './panels/calc-par-cell/calc-par-cell.component';
+import { BlocksTableComponent } from './dashboards/blocks-table/blocks-table.component';
+import { ReadonlyParCellComponent } from './panels/readonly-par-cell/readonly-par-cell.component';
+import { InputNumberComponent } from './dashboard-input/input-number/input-number.component';
+import { ViewNumberComponent } from './dashboard-input/view-number/view-number.component';
+import { ReportFormComponent } from './dashboards/report-form/report-form.component';
 
    
 
@@ -83,6 +94,17 @@ import { TableHtmlCardComponent } from './panels/table-html-card/table-html-card
     ControlPanelComponent,
     TableDashboardComponent,
     TableHtmlCardComponent,
+    ButtonsMenuComponent,
+    InputParRowComponent,
+    SafeHtmlPipe,
+    AddPointDashboardComponent,
+    InputParCellComponent,
+    CalcParCellComponent,
+    BlocksTableComponent,
+    ReadonlyParCellComponent,
+    InputNumberComponent,
+    ViewNumberComponent,
+    ReportFormComponent,
 
    
     

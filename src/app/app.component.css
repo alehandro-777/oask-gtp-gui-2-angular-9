@@ -1,3 +1,90 @@
 .fill-remaining-space {
     flex: 1 1 auto;
   }
+
+  .drawer {
+    position: fixed;
+    height: 100vh;
+    min-width: 25%;
+    border-right: 1px solid #ccc;
+  }
+  .drawer.header {
+    position: absolute;
+    right: 0;
+    justify-content: space-between;
+  }
+  .drawer.contents {
+    padding: 16px;
+  }
+  
+  .main {
+    background-color: #fff;
+  }
+   
+  .main.header {    
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .main.contents {    
+    min-height: 50vh; /* 100vh  22-06-2022 */
+    margin-top: 64px; /* height of header */
+    padding: 16px;
+    margin-bottom: 64px; /* height of footer */
+  }
+  
+  .main.footer {
+    position: fixed;
+    border-top: 1px solid #ccc;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .dt-controls {
+    display: flex;
+    width: 400px;
+     /*width: 100%; */
+  }
+
+  .ctrl-buttons {
+    padding-right: 20px;
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  .input-field {
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    font-size: larger;
+  }
+
+  .icon {
+    border: 1px solid grey;
+    padding: 12px;
+    background: lightgrey;
+    min-width: 25px; 
+  }
+  .footer-div {
+    border: 1px solid grey;
+    padding: 10px;
+    margin-left: 20px;
+    border-radius: 10px;
+  } 
+  .close-icon {
+    border: 1px solid grey;
+    background: lightgrey;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .close-text {
+    display: inline;
+    margin-right: 20px;
+  }

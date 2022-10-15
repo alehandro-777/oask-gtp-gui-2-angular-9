@@ -1,4 +1,2 @@
-<div class="card">
-    <div class="cmd-btn top right-max" (click)="saveExcel()"><mat-icon>save</mat-icon></div>
-    <div class="table-content" [innerHTML]="tableHtml"></div>   
-</div>
+    <div class="table-title"><strong>Таблиця [{{id}}]. </strong>{{tableTitle}}</div>
+    <div class="table-content" [innerHTML]="tableHtml | safeHtml"></div>   

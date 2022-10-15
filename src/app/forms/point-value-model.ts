@@ -27,12 +27,12 @@ export interface ValuesResponse {
 }
 
 export interface PointValue {
-    _id:string;
+    _id?:string;
     value: number;
     state: string;
-    deleted: string;
-    time_stamp: Date;
-    user: number;
-    created_at: Date;
+    deleted?: string;
+    time_stamp: string;
+    user: string;
+    created_at?: string;
     point: number;
 }

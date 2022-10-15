@@ -1,0 +1,35 @@
+<div class="form-title"><strong>Форма [{{id}}]</strong> {{form.full_name}} </div>
+<table>
+    <thead [innerHTML]="header | safeHtml"></thead>
+    
+    <tbody>    
+        <tr class="table-row" *ngFor = "let row of data; let i = index">
+            <td *ngFor = "let column of row; let j = index" [ngClass]="{'freeze':column.freeze}">
+                <ng-template [ngIf]="column">
+                
+                    <ng-container  [ngSwitch]="column.type">
+
+                        <div *ngSwitchCase="'text'" 
+                            [ngClass]="{'form-label':true}"
+                            [style.width]="column.width" 
+                            [style.background-color]="column.bc"
+                            [style.font-weight]="column.fw" >
+                          {{column.value}}
+                        </div>
+
+                        <app-input-number *ngSwitchCase="'input'" 
+                            [point]="column">
+                        </app-input-number>
+
+                        <div *ngSwitchDefault> 
+                            {{column.type}}
+                        </div>
+
+                    </ng-container>
+
+                </ng-template>
+
+            </td>
+        </tr>
+    </tbody> 
+</table>  

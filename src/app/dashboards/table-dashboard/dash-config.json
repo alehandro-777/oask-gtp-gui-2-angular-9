@@ -1,20 +1,20 @@
 [
-  {"icon":"mic","name":"Активний газ",  "payload":{"id":3}},
-  {"icon":"mic","name":"ВТВ....",  "payload":{"id":3}},
-  {"icon":"mic","name":"ВТВ....",  "payload":{"id":3}},
-  {"icon":"mic","name":"ВТВ....",  "payload":{"id":3}},
+  {"icon":"mic","name":"Активний газ",  "payload":{"id":1}},
+  {"icon":"mic","name":"ВТВ....",  "payload":{"id":2}},
+  {"icon":"mic","name":"Зведення відбір/закачка",  "payload":{"id":3}},
+  {"icon":"mic","name":"ZZZZZZZZZZZZ",  "payload":{"id":4}},
 
     {
-      "icon":"commute","name":"Звіти добові", "payload":{"id":1},      
+      "icon":"commute","name":"Звіти добові", "payload":{"id":5},      
       "childNodes":[
-        {"icon":"mic","name":"КС Бобровницька",  "payload":{"id":1}}, 
-        {"icon":"mic","name":"ПСГ Мрин",  "payload":{"id":3}},
-        {"icon":"mic","name":"Стан ГПА",  "payload":{"id":3}},
-        {"icon":"mic","name":"Стан ПСГ",  "payload":{"id":3}}
+        {"icon":"mic","name":"КС Бобровницька",  "payload":{"id":6}}, 
+        {"icon":"mic","name":"ПСГ Мрин",  "payload":{"id":7}},
+        {"icon":"mic","name":"Стан ГПА",  "payload":{"id":8}},
+        {"icon":"mic","name":"Стан ПСГ",  "payload":{"id":9}}
       ]
     },
     {
-      "icon":"commute","name":"Звіти міс", "payload":{"id":1},      
+      "icon":"commute","name":"Звіти міс", "payload":{"id":10},      
       "childNodes":[
         {"icon":"mic","name":"Відбір",  "payload":{"id":1}}, 
         {"icon":"mic","name":"Закачка",  "payload":{"id":3}},

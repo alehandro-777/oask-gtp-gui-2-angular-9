@@ -1,14 +1,31 @@
-
-    <mat-grid-list cols="5" rowHeight="125px">    
-        
-        <mat-grid-tile rowspan="3">
-            <app-tree-menu [root]="side_menu" (change)="pointChanged($event)"></app-tree-menu>
-        </mat-grid-tile> 
-
-        <mat-grid-tile *ngFor="let point of points">
-                <app-input-par-card [point]="point" ></app-input-par-card>       
-        </mat-grid-tile>       
+<div class="form-title"><strong>Форма [{{form_id}}]</strong> {{title}} </div>
+<table>
+    <thead [innerHTML]="header | safeHtml"></thead>
     
-    </mat-grid-list>
+    <tbody>    
+        <tr class="table-row" *ngFor = "let row of table.rows; let i = index">
+            <td *ngFor = "let column of table.headers; let j = index">
+                <ng-template [ngIf]="row[column]">
+                
+                    <ng-container [ngSwitch]="table.columns[j].type">
+                        <div [style.width]="table.columns[j].width" class="form-label" *ngSwitchCase="'textCol'">{{row[column]}}</div>
+                        <app-input-par-cell [width]="table.columns[j].width" 
+                            [init_values]="form_values" [db_points]="form_points"
+                            *ngSwitchCase="'inputCol'" [point]="row[column]"></app-input-par-cell>
+                        <app-calc-par-cell [width]="table.columns[j].width" 
+                            [init_values]="form_values"
+                            *ngSwitchCase="'funcCol'" [func_id]="row[column]"> </app-calc-par-cell>
+                        <div *ngSwitchDefault>{{table.columns[j].type}}</div>
+                    </ng-container>
 
+                </ng-template>
 
+            </td>
+        </tr>
+    </tbody> 
+</table>  
+ 
+  
+
+ 
+  

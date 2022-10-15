@@ -1,0 +1,15 @@
+[
+  {"icon":"mic","name":"Активний газ",  "payload":{"id":1}},
+  {"icon":"mic","name":"ВТВ....",  "payload":{"id":2}},
+  {"icon":"mic","name":"Зведення відбір/закачка",  "payload":{"id":3}},
+  {"icon":"mic","name":"Режим",  "payload":{"id":4}},
+  {"icon":"mic","name":"Test btn 5",  "payload":{"id":5}},
+  {"icon":"mic","name":"Test btn 6",  "payload":{"id":6}},
+  {"icon":"mic","name":"Test btn 7",  "payload":{"id":7}},
+  {"icon":"mic","name":"Test btn 8",  "payload":{"id":8}},
+  {"icon":"mic","name":"Test btn 9",  "payload":{"id":9}},
+  {"icon":"mic","name":"Test btn 10",  "payload":{"id":10}},
+  {"icon":"mic","name":"Test btn 11",  "payload":{"id":11}},
+  {"icon":"mic","name":"Test btn 12",  "payload":{"id":12}}
+
+]

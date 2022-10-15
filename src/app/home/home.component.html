@@ -1,22 +1,5 @@
-<div class="container">
+<h1>ОАСК ПСГ 2.0</h1>
+<h1><- на початку роботи вибрати пункт меню</h1>
 
-    <app-tree-menu [root]="side_menu" (change)="pointChanged($event)"></app-tree-menu>
-
-    <app-point-info-card [point]="point"></app-point-info-card>
-
-    <table-http [rows]="rows" 
-        [header]="header" 
-        [length]="length" 
-        [pageSize]="pageSize" 
-        [pageIndex]="pageIndex" 
-        [title]="title" 
-        (pageChanged)="pageChanged($event)" 
-        (rowSelected)="rowSelected($event)" 
-        *ngIf="point">
-    </table-http>
-
-    <app-create-value-dialog-btn [point]="point" [gasday]="gasday" caption="+" (changed)="valueAdded($event)"></app-create-value-dialog-btn>
-
-</div>
 
 
